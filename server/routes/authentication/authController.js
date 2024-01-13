@@ -3,13 +3,12 @@ import database from "../../database.js";
 import generateAccessToken from "./tokenGenerator.js";
 import { validationResult } from "express-validator";
 
-
 class authController {
   async registration(req, res) {
-    const errors = validationResult(req)
+    const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ message: "Validation errors", errors })
-    };
+      return res.status(400).json({ message: "Validation errors", errors });
+    }
 
     const { username, email, password, birth_date, address, phone_number } =
       req.body;
@@ -33,7 +32,7 @@ class authController {
               const accessToken = generateAccessToken(this.lastID, "user");
               res.status(201).json({
                 message: "User registered successfully",
-                accessToken: accessToken
+                accessToken: accessToken,
               });
               resolve(); //User registered successfully
             }
@@ -70,7 +69,7 @@ class authController {
               const accessToken = generateAccessToken(user.user_id, "user");
               res.status(200).json({
                 message: "Login successful",
-                accessToken: accessToken
+                accessToken: accessToken,
               });
               resolve(); //User logged in successfully
             } else {
