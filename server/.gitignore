@@ -1,6 +1,9 @@
 # Node.js
 node_modules/
 
+config.js
+dbQueries.js
+
 # Logs
 logs
 *.log
