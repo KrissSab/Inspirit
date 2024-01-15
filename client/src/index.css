@@ -1,3 +1,7 @@
+#root {
+  margin: auto;
+}
+
 @font-face {
   font-family: Exo;
   src: url(./components/font/Exo2-Regular.ttf);
@@ -5,7 +9,7 @@
 
 body {
   font-family: Exo, sans-serif;
-  margin: 0;
+  margin: auto;
   display: flex;
   min-width: 320px;
   min-height: 100vh;

@@ -30,7 +30,7 @@ class authController {
               reject(err);
             } else {
               const accessToken = generateAccessToken(this.lastID, "user");
-              res.status(201).json({
+              res.status(200).json({
                 message: "User registered successfully",
                 accessToken: accessToken,
               });
