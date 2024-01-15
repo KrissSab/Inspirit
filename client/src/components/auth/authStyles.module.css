@@ -1,5 +1,6 @@
 body {
   place-items: center;
+  margin: auto;
 }
 
 .authContainer {
@@ -16,6 +17,10 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 1rem 0px;
+}
+
+.authFormLabel {
+  font-size: x-large;
 }
 
 .inputContainer {
